@@ -1,2 +1,2 @@
-# NidroySoft.github.io-
+# NidroySoft.github.io
 Sitio web de NeonSuit
