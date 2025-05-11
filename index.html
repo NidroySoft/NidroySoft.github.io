@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonSuit - Software Modular</title>
+    <style>
+        /* Estilos generales */
+        :root {
+            --neon-blue: #00f5ff;
+            --dark-bg: #0a0a0a;
+            --light-text: #f0f0f0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        /* Contenedor principal */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Logo/Header */
+        .logo {
+            margin-bottom: 2rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .logo h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(90deg, var(--neon-blue), #ff00e4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+        }
+        
+        .logo p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        /* Contenido */
+        .content {
+            margin: 2rem 0;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            width: 200px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 245, 255, 0.2);
+            border-color: var(--neon-blue);
+        }
+        
+        .feature-card h3 {
+            color: var(--neon-blue);
+            margin-top: 0;
+        }
+        
+        /* Botón */
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: transparent;
+            color: var(--neon-blue);
+            border: 2px solid var(--neon-blue);
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            background: var(--neon-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .logo h1 {
+                font-size: 2.5rem;
+            }
+            
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>NeonSuit</h1>
+            <p>Tu suite modular de productividad</p>
+        </div>
+        
+        <div class="content">
+            <h2>Software flexible para tus necesidades</h2>
+            <p>Conecta módulos independientes y crea soluciones a medida.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Facturación</h3>
+                    <p>Genera facturas profesionales con un clic.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Seguridad</h3>
+                    <p>Gestiona contraseñas de forma local y segura.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Customizable</h3>
+                    <p>Añade solo los módulos que necesites.</p>
+                </div>
+            </div>
+            
+            <a href="#" class="cta-button">Próximamente</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 NeonSuit. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
